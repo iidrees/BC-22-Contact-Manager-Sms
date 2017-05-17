@@ -7,11 +7,21 @@
         <link rel="stylesheet" type="text/css" href="/stylesheet/contact.css"> 
     </head>
     <body>
+        <ul class="signout">
+            
+            <li><a href="/home">Home</a></li>
+            <li><a href="/addcontacts">Add Contacts</a></li>
+            <li><a href="/import">Import Contacts</a></li>
+            <li><a href="/sendsms">Send SMS</a></li>
+            <li><a href="/import">Import Contacts</a></li>
+            <li><a href="/signOut">Logout</a></li>
+          </ul>
         <h2>Please signup below</h2>
+        
     	<form id="signup-form" method='POST' action="/register">
             <div class="container">
                 <label><b>Full name:</b></label><br>
-                <input id="full_name" text="text" placeholder="Enter your name" name="full_name" required autofocus><br>
+                <input id="full_name" type="text" placeholder="Enter your name" name="full_name" required autofocus><br>
                 <label><b>Email:</b></label><br>
                 <input id="email" type="email" placeholder="Enter your email address" name="email" required autofocus><br>
                 <label><b>Password:</b></label><br>

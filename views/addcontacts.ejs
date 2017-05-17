@@ -7,7 +7,14 @@
         <link rel="stylesheet" type="text/css" href="/stylesheet/contact.css"> 
     </head>
     <body>
-        <h2> welcome, please check your contacts below.</h2>
+        <ul class="signout">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/import">Import Contacts</a></li>
+            <li><a href="/sendsms">Send SMS</a></li>
+            <li><a href="/import">Import Contacts</a></li>
+            <li><a href="/signOut">Logout</a></li>
+          </ul>
+        <h2> Welcome, please add your contacts below.</h2>
 
         <form id="add-contacts" method ='POST' action="/addcontacts">
             <div class="container">
@@ -16,12 +23,10 @@
                 <label><b>Email:</b></label><br>
                 <input id="email" type="email" placeholder="Enter your email address" name="email" required autofocus><br>
                 <label><b>Phone number:</b></label><br>
-                <input id="number" type="number" placeholder="Enter number" name="number" required> <br>
+                <input id="number" type="text" placeholder="Enter number" name="number" required> <br>
 
                 <button  id="btn" type="submit">Add to contact</button>
             </div>
-        </form>
-        <form>
         </form>
         <script type="text/javascript" src="/javascript/app.js"></script>
     </body>

@@ -1,3 +1,25 @@
 body {
 	background-color: lightblue;
 }
+
+
+ ul .signout {
+ 	list-style-type: none;
+ 	margin-left: 100px;
+ 	padding: 0;
+
+ }
+
+.signout li {
+ 	display: inline;
+ 	text-decoration: none;
+	font-family: Tahoma, sans-serif;
+	margin-right: 15px;
+	font-size: 30px;
+	text-decoration: none;
+ }
+
+
+a {
+	text-decoration: none;
+}

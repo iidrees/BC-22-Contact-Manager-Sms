@@ -25,19 +25,19 @@ app.post('/addcontacts', urlencodedParser, function(req, res) {
    
 
 	
-    //var db = firebase.database();
-    //var ref = db.ref('contacts');
-    //var logRef = ref.child('logs');
-    //var fireAuth = firebase.auth();
-/*	var contacts = {name: fullname, email: email, number: number, timeStamp: new Date().toString()};
+    /*var db = firebase.database();
+    var ref = db.ref('contacts');
+    var logRef = ref.child('logs');
+    var fireAuth = firebase.auth();
+	var contacts = {name: fullname, email: email, number: number, timeStamp: new Date().toString()};
     var contactsRef = ref.child('contact details');
     var contactRef = contactsRef.push(contacts);
-*/
-    //logRef.child(contactRef.key).set(contacts);
-    //logRef.orderByKey().limitToLAst(1).on('child_added', function(snap) {
-      //  console.log('added', snap.val());
-    //});
-    res.render('addcontacts');
+
+    logRef.child(contactRef.key).set(contacts);
+    logRef.orderByKey().limitToLAst(1).on('child_added', function(snap) {
+        console.log('added', snap.val());
+    });
+    res.render('addcontacts');*/
 })
 
 
