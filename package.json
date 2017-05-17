@@ -2,7 +2,7 @@
   "name": "bc_22_contact_manager_sms",
   "version": "1.0.0",
   "description": "A simple web application that helps users manage contact and sends sms",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
