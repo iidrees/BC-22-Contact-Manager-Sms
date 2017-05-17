@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Contact Manager Application</title>
+        
+        <link rel="stylesheet" type="text/css" href="/stylesheet/contact.css"> 
+    </head>
+    <body>
+        <h2>Please signup below</h2>
+    	<form id="form-signup" method='POST' action="/register">
+            <div class="container">
+                <label><b>Full name:</b></label><br>
+                <input id="full_name" text="text" placeholder="Enter your name" name="full_name" required autofocus><br>
+                <label><b>Email:</b></label><br>
+                <input id="email" text"text" placeholder="Enter your email address" name="username" required autofocus><br>
+                <label><b>Password:</b></label><br>
+                <input id="password" type="password" placeholder="Enter Password" name="password" required> <br>
+
+                <button  id="btn" type="submit">Login</button>
+            </div>
+        </form>
+
+
+        <p>Already have an account? Please sign-in below</p>
+        <h2>Please signin below</h2>
+        <form id="form-signin" method='POST' action="/home">
+            <div class="container">
+                <label><b>Email:</b></label>
+                <input id="email" text"text" placeholder="Enter Username" name="uname" required>
+
+                <label><b>Password</b></label>
+                <input id="password" type="password" placeholder="Enter Password" name="password" required>
+
+                <button  id="btn" type="submit">Login</button>
+            </div>
+        </form>
+        <p>Sign in with Google <button type=""></button>  </p>
+
+
+        <!-- scripts -->
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDnyB5FfLDrCOtB3fhNdcVsyesz-GtIv7I",
+            authDomain: "bc-22-contact-manager-sms.firebaseapp.com",
+            databaseURL: "https://bc-22-contact-manager-sms.firebaseio.com",
+            projectId: "bc-22-contact-manager-sms",
+            storageBucket: "bc-22-contact-manager-sms.appspot.com",
+            messagingSenderId: "974884069082"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+        <script type="text/javascript" src="/javascript/app.js"></script>
+    </body>
+</html>
