@@ -8,6 +8,17 @@ var ref = db.ref();
 //Connect to the database
 
 
+// var ref = firebase.database().ref().child('node-client');
+    var logsRef = ref.child('logs');
+    var messagesRef = ref.child('messages');
+    var message = {text: 'hey guys', timeStamp: new Date().toString()};
+    var messageRef = messagesRef.push(message);
+
+    logsRef.child(messageRef.key).set(message);
+    logsRef.orderByKey().limitToLast(1).on('child_added', function(snap) {
+        console.log('added', snap.val());
+    });
+
 
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -77,8 +88,11 @@ app.post('/addcontacts', urlencodedParser, function(req, res) {
 	var fullname = req.body.full_name;
 	var email = req.body.email;
 	var number = req.body.number;
-	
+
 })
+
+
+
 
 }
 
