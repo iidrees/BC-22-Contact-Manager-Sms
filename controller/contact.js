@@ -9,7 +9,7 @@ var ref = db.ref();
 
 
 // var ref = firebase.database().ref().child('node-client');
-    var logsRef = ref.child('logs');
+   /* var logsRef = ref.child('logs');
     var messagesRef = ref.child('messages');
     var message = {text: 'hey guys', timeStamp: new Date().toString()};
     var messageRef = messagesRef.push(message);
@@ -18,7 +18,7 @@ var ref = db.ref();
     logsRef.orderByKey().limitToLast(1).on('child_added', function(snap) {
         console.log('added', snap.val());
     });
-
+*/
 
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
