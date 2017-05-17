@@ -10,6 +10,12 @@ var firebase = require('./fire_base/firebase.js');
 // 
 let app = express();
 
+// set the port of our application
+
+//process.env.PORT lets the port be set by heroku
+
+var port = process.env.PORT || 9090;
+
 //set up the template engine
 app.set('view engine', 'ejs');
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
@@ -45,6 +51,6 @@ app.get('/addcontacts', function(req, res) {
 // static files 
 app.use(express.static('./public'));
 
-app.listen(3000, () => {
-	console.log('project server is up and running');
-})
+app.listen(port, function() {
+	console.log('project server is up and running on http://localhost: ' + port);
+});
