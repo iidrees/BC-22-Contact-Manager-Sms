@@ -7,27 +7,23 @@
         <link rel="stylesheet" type="text/css" href="/stylesheet/contact.css"> 
     </head>
     <body>
-        <ul class="signout">
+        <ul class="nav">
             <li><a href="/home">Home</a></li>
-            <li><a href="/import">Import Contacts</a></li>
+            <li><a href="/addcontacts">Add Contact</a></li>
             <li><a href="/sendsms">Send SMS</a></li>
-            <li><a href="/import">Import Contacts</a></li>
             <li><a href="/signOut">Logout</a></li>
           </ul>
-        <h2> welcome, please check your contacts below.</h2>
+        <h2> welcome, please import your contacts below.</h2>
 
-        <form id="add-contacts" method ='POST' action="/addcontacts">
-            <div class="container">
-                <label><b>Full name:</b></label><br>
-                <input id="full_name" type="text" placeholder="Enter your name" name="full_name" required autofocus><br>
-                <label><b>Email:</b></label><br>
-                <input id="email" type="email" placeholder="Enter your email address" name="email" required autofocus><br>
-                <label><b>Phone number:</b></label><br>
-                <input id="number" type="text" placeholder="Enter number" name="number" required> <br>
+        <form id="add-contacts" method ='POST' action="/import">
+            <div class="import">
+                <label><b>Please Import your contacts here:</b></label><br>
+                <p><input id="file_name" type="file" placeholder="Enter your name" name="file_name"><br></p>
+               
 
-                <button  id="btn" type="submit">Add to contact</button>
+                <button id="btn" type="submit">Click to Import Contact</button>
             </div>
         </form>
-        <script type="text/javascript" src="/javascript/app.js"></script>
+        <!--<script type="text/javascript" src="/javascript/app.js"></script>-->
     </body>
 </html>

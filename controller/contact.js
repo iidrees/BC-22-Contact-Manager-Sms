@@ -1,4 +1,5 @@
-var bodyParser = require('body-parser'); // require body parser so you can get data through the req.body object and render it.
+// require body parser so you can get data through the req.body object and render it.
+var bodyParser = require('body-parser'); 
 
 //Connect to the database
 var firebase = require('../fire_base/firebase.js');
@@ -70,7 +71,7 @@ app.get('/signOut', function(req,res) {
 })
 
 
-	// Add contacts to the db
+	
 
 
 

@@ -1,5 +1,19 @@
 body {
 	background-color: lightblue;
+	background-image: url(/images/imageregister.jpg);
+	bac
+}
+
+h2 {
+	margin-left: 700px;
+}
+
+#p1 {
+	margin-left: 700px;
+}
+
+.form-control {
+	width: 50px;
 }
 
 
@@ -7,6 +21,7 @@ body {
  	list-style-type: none;
  	margin-left: 100px;
  	padding: 0;
+
 
  }
 
@@ -22,4 +37,12 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+#signup-form {
+	margin-left: 700px;
+}
+
+#form-signin {
+	margin-left: 700px;
 }

@@ -5,34 +5,36 @@
         <title>Contact Manager Application</title>
         
         <link rel="stylesheet" type="text/css" href="/stylesheet/contact.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body>
         <ul class="signout">
             
-            <li><a href="/home">Home</a></li>
-            <li><a href="/addcontacts">Add Contacts</a></li>
-            <li><a href="/import">Import Contacts</a></li>
-            <li><a href="/sendsms">Send SMS</a></li>
-            <li><a href="/import">Import Contacts</a></li>
-            <li><a href="/signOut">Logout</a></li>
+            <li><a class="btn btn-default" role="button" href="/home">Home</a></li>
+            <li><a class="btn btn-default"  role="button" href="/addcontacts">Add Contacts</a></li>
+            <li><a class="btn btn-default"  role="button"  href="/import">Import Contacts</a></li>
+            <li><a  class="btn btn-default"  role="button" href="/sendsms">Send SMS</a></li>
+            <li><a  class="btn btn-default"  role="button" href="/import">Import Contacts</a></li>
+            <li><a class="btn btn-default"  role="button" href="/signOut">Logout</a></li>
           </ul>
         <h2>Please signup below</h2>
         
     	<form id="signup-form" method='POST' action="/register">
             <div class="container">
                 <label><b>Full name:</b></label><br>
-                <input id="full_name" type="text" placeholder="Enter your name" name="full_name" required autofocus><br>
+                <p><input id="full_name" type="text" class="form-control" placeholder="Enter your name" name="full_name" required autofocus></p>
                 <label><b>Email:</b></label><br>
-                <input id="email" type="email" placeholder="Enter your email address" name="email" required autofocus><br>
+                <p><input id="email" type="email" placeholder="Enter your email address" name="email" required autofocus></p>
                 <label><b>Password:</b></label><br>
-                <input id="password" type="password" placeholder="Enter Password" name="password" required> <br>
+                <p><input id="password" type="password" placeholder="Enter Password" name="password" required></p><br>
 
-                <button  id="btn" type="submit">Login</button>
+                <button  id="btn" type="submit">Submit</button>
             </div>
         </form>
 
 
-        <p>Already have an account? Please sign-in below</p>
+        <p id="p1">Already have an account? Please sign-in below</p>
         <h2>Please signin below</h2>
         <form id="form-signin" method='POST' action="/register">
             <div class="container">
