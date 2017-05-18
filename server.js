@@ -1,13 +1,16 @@
 'use strict';
 // require modules
 var express = require('express');
-var controller = require('./controller/contact.js'); 
+var fs = require('fs');
+var userSignin = require('./controller/contact.js'); 
 var addContact = require('./controller/add.js');
+var importContact = require('./controller/importcontacts.js');
 var bodyParser = require('body-parser');
 var firebase = require('./fire_base/firebase.js');
 var db = firebase.database();
-var ref = db.ref('contacts');
-var addRef = ref.child('logs');
+var contactRef = db.ref('contacts');
+var addRef = contactRef.child('import_contact');
+//addRef.on('value', getData, errData);
 var fireAuth = firebase.auth();
 
  
@@ -26,8 +29,59 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 //Fire controllers
 
-controller(app);
-//addContact(app);
+userSignin(app);
+addContact(app);
+importContact(app);
+
+
+
+
+/*function getData(data) {
+	//console.log(data.val());
+	var numbers = data.val();
+	var keys = Object.keys(numbers);
+	//console.log(keys);
+	for (var i = 0; i < keys.length; i++) {
+		var k = keys[i];
+		var name = numbers[k].name;
+		var number = numbers[k].number;
+	    //console.log(name, number); 
+	}
+	return (name, number); 
+}
+function errData(err) {
+	console.log('Error!');
+	console.log(err);
+}
+
+//var details = getData();
+app.get('/home', urlencodedParser, function(req, res) {
+	var detail;
+	addRef.on('value', function(data){
+		 detail = data.val();
+		 var keys = Object.keys(detail);
+		//console.log(detail)
+		console.log(keys);
+		var newName = [];
+		var newNumber = []; 
+		for (var i = 0; i < keys.length; i++) {
+			var k = keys[i];
+			var name = detail[k].name;
+			var number = detail[k].number;
+		    //console.log(name, number);
+		    newNumber.push(name,number);
+		    //newName.push(name);
+	}
+	console.log(newName, newNumber);
+		//var name = detail.
+		res.render('home', {detail: newNumber});
+	})
+    
+	res.render('home', {detail: detail});
+
+
+
+})*/
 
 // testing my middleware
 
@@ -39,46 +93,24 @@ app.get('/register', function(req, res) {
 	res.render('register');
 })
 
+
+
+
+
+
+
 app.get('/home', function(req, res) {
 	res.render('home');
+})
+
+app.get('/import', function(req, res) {
+	res.render('import');
 })
 
 app.get('/addcontacts', function(req, res) {
 	res.render('addcontacts');
 })
-app.post('/addcontacts', urlencodedParser, function(req, res) {
-	var fullname = req.body.full_name;
-	var email = req.body.email;
-	var number = req.body.number;
-	
-	var contacts = {name: fullname, email: email, number: number, timeStamp: new Date().toString()};
-	//console.log(contacts);
 
-	//var user = fireAuth.currentUser;
-/*	if (user) {
-		userId = user.uid;
-
-	//addRef.child('/' + userId).push(contacts).then(res.redirect('/addcontacts'))
-	     .catch(function(err) {
-                var errorCode = err.code;
-                var errorMessage = err.message;
-                return res.render('/register', {error: errorMessage});
-            });
-
-
-	}*/
-
-	
-    var contactsRef = ref.child('contact details');
-    var contactRef = contactsRef.push(contacts);
-
-    //addRef.child(contactRef.key).set(contacts);
-    addRef.orderByKey().limitToLast(1).on('child_added', function(snap) {
-        console.log('added', snap.val());
-    });
-    res.render('addcontacts');
-
-})
 
 // static files 
 app.use(express.static('./public'));

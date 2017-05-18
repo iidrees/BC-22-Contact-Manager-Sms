@@ -19,6 +19,7 @@
     "express": "^4.15.2",
     "firebase": "^3.9.0",
     "firebase-admin": "^4.2.1",
+    "fs-stream": "^0.2.1",
     "mongoose": "^4.9.9"
   }
 }
