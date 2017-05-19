@@ -16,24 +16,52 @@ body {
 }
 
 #p1 {
-	
+	color: #FCD271;
 }
 
 .form-control {
 	width: 50px;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
+li {
+    float: left;
+}
 
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #4f3602;
+}
+
+.active {
+	background-color: #4CAF50;
+}
+/*
  ul {
  	list-style-type: none;
  	margin-left: 0;
  	padding: 0;
+ 	border: 1px, solid, #fcd271;
 
 
  }
 
 .signout li {
-	text-align: center;
+
  	display: inline;
  	text-decoration: none;
 	font-family: Tahoma, sans-serif;
@@ -46,8 +74,8 @@ body {
 a {
 	text-decoration: none;
 	font-family: Tahoma, sans-serif;
-	background-color: #fcd271;
-}
+	
+}*/
 
 #signup-form {
 	margin-left: 500px;
