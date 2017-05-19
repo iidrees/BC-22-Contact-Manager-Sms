@@ -5,28 +5,63 @@ body {
 	
 }
 
-h2 {
-	margin-left: 700px;
+ #head2 {
+	margin-left: 500px;
+	margin-bottom: 70px;
+}
+
+ #head1 {
+	margin-left: 500px;
+	
 }
 
 #p1 {
-	margin-left: 700px;
+	color: #FCD271;
 }
 
 .form-control {
 	width: 50px;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
+li {
+    float: left;
+}
 
- ul .signout {
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #4f3602;
+}
+
+.active {
+	background-color: #4CAF50;
+}
+/*
+ ul {
  	list-style-type: none;
- 	margin-left: 100px;
+ 	margin-left: 0;
  	padding: 0;
+ 	border: 1px, solid, #fcd271;
 
 
  }
 
 .signout li {
+
  	display: inline;
  	text-decoration: none;
 	font-family: Tahoma, sans-serif;
@@ -38,18 +73,45 @@ h2 {
 
 a {
 	text-decoration: none;
-}
+	font-family: Tahoma, sans-serif;
+	
+}*/
 
 #signup-form {
-	margin-left: 600px;
+	margin-left: 500px;
+	float: left;
+	margin-right: 30px;
 }
 
 #form-signin {
 	margin-left: 700px;
+	margin-bottom: 40px;
 }
 input[type=text], input[type=email], input[type=password] {
     border: 2px solid #FCD271;
     border-radius: 4px;
     width: 300px;
     height: 25px;
+}
+
+#addcontact {
+	color: #FCD271;
+}
+
+#add-contacts, #addcontact {
+	margin-left: 600px;
+}
+
+#importcontact, label, #sendsms {
+	color: #FCD271;
+}
+
+#import-contacts, #importcontact {
+	margin-left: 600px;
+}
+
+#sendsms {
+	margin-left: 500px;
+	margin-top: 300px;
+	font-size: 70px;
 }

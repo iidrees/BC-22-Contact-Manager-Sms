@@ -49,6 +49,10 @@ app.get('/import', function(req, res) {
 	res.render('import');
 })
 
+app.get('/sendsms', function(req, res) {
+	res.render('sendsms');
+})
+
 app.get('/addcontacts', function(req, res) {
 	res.render('addcontacts');
 })

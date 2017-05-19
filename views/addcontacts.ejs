@@ -9,11 +9,12 @@
     <body>
         <ul class="signout">
             <li><a href="/home">Home</a></li>
+            <li><a class="active" href="/addcontacts">Add Contact</a></li>
             <li><a href="/sendsms">Send SMS</a></li>
             <li><a href="/import">Import Contacts</a></li>
             <li><a href="/signOut">Logout</a></li>
           </ul>
-        <h2> Welcome, please add your contacts below.</h2>
+        <h2 id="addcontact"> Welcome, please add your contacts below.</h2>
 
         <form id="add-contacts" method ='POST' action="/addcontacts">
             <div class="container">
@@ -24,7 +25,7 @@
                 <label><b>Phone number:</b></label><br>
                 <input id="number" type="text" placeholder="Enter number" name="number" required> <br>
 
-                <button  id="btn" type="submit">Add to contact</button>
+                <p><button  id="btn" type="submit">Add to contact</button></p>
             </div>
         </form>
         <script type="text/javascript" src="/javascript/app.js"></script>
