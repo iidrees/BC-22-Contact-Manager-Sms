@@ -5,16 +5,10 @@ var firebase = require('../fire_base/firebase.js');
 var db = firebase.database();
 var contactRef = db.ref('contacts');
 var addRef = contactRef.child('import_contact');
-//var db = firebase.database();
-//var ref = db.ref('contacts');
-//var logRef = ref.child('logs');
-//var fireAuth = firebase.auth();
-//var contactsRef = ref.child('contact details');
 
 //Connect to the database
 var db = firebase.database();
 var ref = db.ref('contacts');
-//var addRef = ref.child('logs');
 var fireAuth = firebase.auth();
 
 
