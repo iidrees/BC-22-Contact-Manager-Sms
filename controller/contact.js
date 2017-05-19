@@ -41,7 +41,7 @@ app.post('/register', urlencodedParser, function(req, res) {
 	});
 });
 
-app.post('/register', urlencodedParser, function(req, res) {
+app.post('/home', urlencodedParser, function(req, res) {
 	var full_name = req.body.full_name;
     var email = req.body.eMail;
     var password = req.body.passWord;

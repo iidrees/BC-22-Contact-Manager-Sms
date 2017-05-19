@@ -5,8 +5,8 @@
         <title>Contact Manager Application</title>
         
         <link rel="stylesheet" type="text/css" href="/stylesheet/contact.css"> 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
     </head>
     <body>
         <ul class="signout">
@@ -15,22 +15,32 @@
             <li><a class="btn btn-default"  role="button" href="/addcontacts">Add Contacts</a></li>
             <li><a class="btn btn-default"  role="button"  href="/import">Import Contacts</a></li>
             <li><a  class="btn btn-default"  role="button" href="/sendsms">Send SMS</a></li>
-            <li><a  class="btn btn-default"  role="button" href="/import">Import Contacts</a></li>
             <li><a class="btn btn-default"  role="button" href="/signOut">Logout</a></li>
           </ul>
         <h2>Please signup below</h2>
         
     	<form id="signup-form" method='POST' action="/register">
-            <div class="container">
+            <div class= >
                 <label><b>Full name:</b></label><br>
-                <p><input id="full_name" type="text" class="form-control" placeholder="Enter your name" name="full_name" required autofocus></p>
+                <p><input id="full_name" type="text"  placeholder="Enter your name" name="full_name" required autofocus></p>
                 <label><b>Email:</b></label><br>
                 <p><input id="email" type="email" placeholder="Enter your email address" name="email" required autofocus></p>
                 <label><b>Password:</b></label><br>
-                <p><input id="password" type="password" placeholder="Enter Password" name="password" required></p><br>
-
-                <button  id="btn" type="submit">Submit</button>
+                <p><input id="password" type="password"  placeholder="Enter Password" name="password" required></p><br>
+                <!-- <label><b>Email:</b></label><br>
+                <p><input id="email" type="email" placeholder="Enter your email address" name="email" required autofocus></p> -->   
             </div>
+            <!-- <div >
+                <label><b>Email:</b></label><br>
+                <p><input id="email" type="email" placeholder="Enter your email address" name="email" required autofocus></p>
+                <label><b>Password:</b></label><br>
+                <p><input id="password" type="password"  placeholder="Enter Password" name="password" required></p><br>
+            </div>
+            <div >
+                <label><b>Password:</b></label><br>
+                <p><input id="password" type="password"  placeholder="Enter Password" name="password" required></p><br>
+            </div> -->
+            <button  id="btn" type="submit">Submit</button>
         </form>
 
 
@@ -39,10 +49,10 @@
         <form id="form-signin" method='POST' action="/register">
             <div class="container">
                 <label><b>Email:</b></label>
-                <input id="eMail" text"text" placeholder="Enter email" name="email" required>
+                <p><input id="eMail" type="email" placeholder="Enter email" name="email" required></p>
 
                 <label><b>Password</b></label>
-                <input id="passWord" type="password" placeholder="Enter Password" name="password" required>
+                <p><input id="passWord" type="password" placeholder="Enter Password" name="password" required></p>
 
                 <button  id="btn" type="submit">Login</button>
             </div>

@@ -22,15 +22,20 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 module.exports = function (app) {
 
-	// Import contacts
+	// Import contacts from users
     app.post('/import', urlencodedParser, function(req, res) {
     var contactJson = req.body.file_name;
+
     console.log(contactJson);
 
     fs.readFile(contactJson, 'utf8', function(err,data){
+
+       
         console.log(data);
         var contactStr = JSON.parse(data);
-        console.log(contactStr.contacts.contact_details.new_one.name);
+
+        console.log(!contactStr.contacts.name && !contactStr.contacts.number );
+    
          
         var name1 = contactStr.contacts.contact_details.new_one.name;
         var name2 = contactStr.contacts.contact_details.new_two.name;
