@@ -3,4 +3,5 @@ node_modules/
 .env
 bc-22-contact-manager-sms-firebase-adminsdk-vut72-43535501df.json
 bc-22-contact-sms-export.json
+.new.env
 
